@@ -21,10 +21,12 @@
 // Sections Styles
 
 #grid-container {
-	display: grid;
- grid-template-columns: 25% 25% 25% 25%;
+	display:grid;
+	grid-template-columns: 50% 50%;
 }
 
-.grid-item {
-	height: 100px;
+.grid-item{
+	height: 100px
+	
 }
+
