@@ -347,6 +347,10 @@ template {
   -ms-grid-column-span: 4;
   grid-area: head;
   background-color: #8ca0ff;
+  padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
 }
 
 #page > nav {
@@ -355,6 +359,10 @@ template {
   -ms-grid-column: 1;
   grid-area: nav;
   background-color: #ffa08c;
+  padding-top: 10vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
 }
 
 #page > main {
@@ -363,6 +371,10 @@ template {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: main;
+  padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
 }
 
 #page > img {
@@ -377,6 +389,54 @@ template {
 #page > footer {
   -ms-grid-row: 4;
   -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: foot;
+  background-color: #8cffa0;
+}
+
+#page2 {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+      grid-template-areas: "header header header" "left main right" "left main right" "foot foot foot";
+  -ms-grid-columns: 33% 33% 33%;
+  grid-template-columns: 33% 33% 33%;
+}
+
+#page2 > header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: #8ca0ff;
+}
+
+#page2 > main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: main;
+}
+
+#page2 > left {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+#page2 > right {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: right;
+}
+
+#page2 > footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: foot;
   background-color: #8cffa0;
@@ -417,13 +477,30 @@ textarea {
 /* =============
     Footer
 ============= */
-#grid-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 25% 25% 25% 25%;
-  grid-template-columns: 25% 25% 25% 25%;
+header {
+  font-family: "Montserrat", sans-serif;
 }
 
-.grid-item {
-  height: 100px;
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+}
+
+left {
+  font-family: "Montserrat", sans-serif;
+}
+
+right {
+  font-family: "Montserrat", sans-serif;
 }

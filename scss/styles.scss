@@ -20,11 +20,40 @@
 
 // Sections Styles
 
-#grid-container {
-	display: grid;
- grid-template-columns: 25% 25% 25% 25%;
+
+header {
+	font-family: 'Montserrat', sans-serif;
 }
 
-.grid-item {
-	height: 100px;
+p {
+	font-family: 'Montserrat', sans-serif;
+	padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
+}
+
+nav {
+font-family: 'Montserrat', sans-serif;
+}
+	
+main {
+font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+	font-family: 'Montserrat', sans-serif;
+}
+
+left {
+	font-family: 'Montserrat', sans-serif;
+}
+
+right {
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
 }

@@ -19,15 +19,27 @@
 #page > header {
   grid-area: head;
   background-color: #8ca0ff;
+  padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
 }
 
 #page > nav {
   grid-area: nav;
   background-color: #ffa08c;
+  padding-top: 10vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
 }
 
 #page > main {
   grid-area: main;
+  padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
 }
 
 #page > img {
@@ -41,4 +53,61 @@
   background-color: #8cffa0;
 }
 
+#page2 {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "left main right"
+    "foot foot foot";
+  grid-template-columns: 33% 33% 33%;
+}
 
+#page2 > header {
+  grid-area: header;
+  padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
+  background-color: #8ca0ff;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+
+
+#page2 > main {
+  grid-area: main;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 3vh;
+  padding-right: 3vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
+}
+
+#page2 > left {
+    grid-area: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
+} 
+
+#page2 > right {
+    grid-area: right;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 3vh;
+  padding-right: 5vw;
+  padding-bottom: 3vh;
+  padding-left: 5vw;
+}
+
+
+#page2 > footer {
+  grid-area: foot;
+  background-color: #8cffa0;
+  font-family: 'Montserrat', sans-serif;
+}
