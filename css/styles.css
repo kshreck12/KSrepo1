@@ -334,9 +334,9 @@ template {
 #page {
   display: -ms-grid;
   display: grid;
-  width: auto;
+  width: 100vw;
   height: 100vh;
-      grid-template-areas: "head head head head" "nav main main img" "nav main main img" "nav foot foot foot";
+      grid-template-areas: "head head head head" "nav main main img" "nav main main img" "foot foot foot foot";
   -ms-grid-columns: 25% 25% 25% 25%;
   grid-template-columns: 25% 25% 25% 25%;
 }
@@ -357,14 +357,18 @@ template {
 
 #page > nav {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: nav;
   background-color: #ffa08c;
-  padding-top: 10vh;
+  padding-top: 3vh;
   padding-right: 5vw;
   padding-bottom: 3vh;
   padding-left: 5vw;
+  overflow: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #page > main {
@@ -390,8 +394,8 @@ template {
 
 #page > footer {
   -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: foot;
   background-color: #8cffa0;
 }

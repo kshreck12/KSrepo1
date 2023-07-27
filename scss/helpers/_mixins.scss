@@ -106,7 +106,7 @@ html {
 /* ---------------- Media Queries ---------------- */
 // Small devices
 @mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
+    @media (min-width: 30rem {$screen-sm-min}) {
         @content;
     }
 }
