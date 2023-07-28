@@ -13,6 +13,8 @@
         "goal  goal  quote"
         "goal  goal  index-photo";
 
+    }
+
         @include lg{
             grid-template-columns: 50% auto;
             grid-template-areas: 
@@ -22,7 +24,7 @@
             }
 
         #header {
-            grid-area: header
+            grid-area: header;
         }
 
         #goal{
