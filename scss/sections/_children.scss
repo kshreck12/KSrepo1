@@ -11,11 +11,15 @@
     "rebound"
     "nanny";
 
+}
+
 
     @include lg {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
         "wayside" "rebound" "nanny"
+        "wayside" "rebound" "nanny";
+
         
     }
 
@@ -33,6 +37,5 @@
         grid-area: nanny;
         
         }
-    }
-}
+
  
