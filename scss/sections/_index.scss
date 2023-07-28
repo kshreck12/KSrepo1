@@ -1,0 +1,65 @@
+/* =============
+    Index
+============= */
+
+
+#index-header {
+    display: grid
+    grid-template-columns: 16px auto 16px
+    grid-gap: 20px;
+    grid-template-areas:
+    "header header header"
+    "nav   header header";
+
+    }
+
+    #header {
+        grid-area: header;
+        text-align: center;
+        background-color: #219ebc;
+    }
+
+    #nav {
+        grid-area: nav;
+    }
+
+
+#index-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 16px auto 16px;
+        grid-template-areas:
+        "goal  goal  quote"
+        "goal  goal  quote"
+        "goal  goal  index-photo";
+
+        @include lg{
+            grid-template-columns: 50% auto;
+            grid-template-areas: 
+            "goal quote"
+            "goal quote"
+            "goal index-photo";
+            }
+
+
+
+        #goal{
+            grid-area: goal;
+        }
+
+        #quote{
+            grid-area: quote;
+        }
+
+
+        #index-photo{
+            grid-area: photo;
+            img{
+                width: 100%;
+                object-fit: contain;
+
+            }
+        }
+    }
+
+} 

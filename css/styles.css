@@ -13,6 +13,7 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --blue: #219ebc;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -334,6 +335,10 @@ template {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* =============
     Buttons
 ============= */
@@ -363,6 +368,74 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  display: none;
+}
+
 /* =============
     Footer
 ============= */
+/* =============
+    Index
+============= */
+#index-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". index .";
+}
+#index-content > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: index;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header  quote" "goal  goal  index-photo";
+}
+@media (min-width: 1024px) {
+  #index-content > div {
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+        grid-template-areas: "goal quote" "goal photo";
+  }
+}
+#index-content > div #header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+#index-content > div #goal {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: goal;
+}
+#index-content > div #quote {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: quote;
+}
+#index-content > div #index-photo {
+  grid-area: photo;
+}
+@media (min-width: 1024px) {
+  #index-content > div #goal {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #index-content > div #quote {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #index-content > div #index-photo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+}
+#index-content > div #index-photo img {
+  width: 100%;
+}
