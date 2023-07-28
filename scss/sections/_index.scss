@@ -3,33 +3,13 @@
 ============= */
 
 
-#index-header {
-    display: grid
-    grid-template-columns: 16px auto 16px
-    grid-gap: 20px;
-    grid-template-areas:
-    "header header header"
-    "nav   header header";
-
-    }
-
-    #header {
-        grid-area: header;
-        text-align: center;
-        background-color: #219ebc;
-    }
-
-    #nav {
-        grid-area: nav;
-    }
-
 
 #index-content {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 16px auto 16px;
         grid-template-areas:
-        "goal  goal  quote"
+        "header header header"
         "goal  goal  quote"
         "goal  goal  index-photo";
 
@@ -41,7 +21,9 @@
             "goal index-photo";
             }
 
-
+        #header {
+            grid-area: header
+        }
 
         #goal{
             grid-area: goal;
@@ -56,7 +38,6 @@
             grid-area: photo;
             img{
                 width: 100%;
-                object-fit: contain;
 
             }
         }
