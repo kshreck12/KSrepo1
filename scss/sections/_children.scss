@@ -1,13 +1,9 @@
-/* =============
-    Index
-============= */
-
-main{
-    display: none;
-}
 
 
-#index-content {
+
+
+
+#children-content {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 16px auto 16px;
@@ -15,39 +11,25 @@ main{
         "header header header"
         "goal  goal  quote"
         "goal  goal  index-photo";
- 
-@include lg {
+
+    }
+
+        @include lg {
             grid-template-columns: 50% auto;
-            grid-template-areas:
+            grid-template-areas: 
             "goal quote"
             "goal quote"
             "goal index-photo";
             }
-    }
- 
-   
+
         #header {
             grid-area: header;
         }
- 
+
         #goal{
             grid-area: goal;
         }
- 
+
         #quote{
             grid-area: quote;
         }
- 
- 
-        #index-photo{
-            grid-area: index-photo;
-            width: 100%;
-           
-            }
- 
- 
-
-
-
-
-
