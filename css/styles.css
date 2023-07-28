@@ -332,11 +332,58 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". main .";
+}
+@media (min-width: 1200px) {
+  main {
+    -ms-grid-columns: auto 1200px auto;
+    grid-template-columns: auto 1200px auto;
+  }
+}
+main > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
 /* =============
     Typography
 ============= */
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+#quote {
+  font-style: italic;
+  font-size: 16px;
+}
+
+#goal {
+  padding: 15px;
+}
+
+h2 {
+  margin-bottom: 8px;
 }
 
 /* =============
@@ -365,10 +412,101 @@ textarea {
 /* =============
     Navigation
 ============= */
+.show-menu {
+  display: block !important;
+}
+
 /* =============
     Header
 ============= */
-
+header {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 16px 20px auto 20px 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". header .";
+  padding: 30px 0;
+}
+header > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header;
+  text-align: center;
+}
+header > div h1 {
+  font-size: 2.1875rem;
+  margin-bottom: 8px;
+}
+header > div h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+header > div #nav-container #burger-container button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  background-color: yellowgreen;
+  margin: 24px auto 0;
+}
+@media (min-width: 1024px) {
+  header > div #nav-container #burger-container {
+    display: none;
+  }
+}
+header > div #nav-container #main-menu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header > div #nav-container #main-menu {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  header > div #nav-container #main-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+header > div #nav-container #main-menu ul li {
+  list-style: none;
+  text-align: left;
+  background-color: yellowgreen;
+  padding: 20px;
+}
+@media (min-width: 1024px) {
+  header > div #nav-container #main-menu ul li {
+    padding: 0px;
+  }
+}
+header > div #nav-container #main-menu ul li a:link, header > div #nav-container #main-menu ul li a:visited {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-container #main-menu ul li a:link:active, header > div #nav-container #main-menu ul li a:visited:hover, header > div #nav-container #main-menu ul li a:visited:active {
+  color: var(--white);
+}
 
 /* =============
     Footer
@@ -376,3 +514,55 @@ textarea {
 /* =============
     Index
 ============= */
+#index-content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+      grid-template-areas: "index-img" "goal" "quote";
+}
+@media (min-width: 1024px) {
+  #index-content {
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto 20px auto 20px auto;
+        grid-template-areas: "quote quote quote" "goal  goal index-img" "goal  goal index-img";
+  }
+}
+#index-content #goal {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: goal;
+}
+#index-content #quote {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: quote;
+}
+#index-content #index-img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: index-img;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  #index-content #goal {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  #index-content #quote {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  #index-content #index-img {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+  }
+}
+#index-content #index-img img {
+  width: 70%;
+  margin: 0 auto;
+}

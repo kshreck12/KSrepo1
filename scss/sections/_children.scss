@@ -6,30 +6,33 @@
 #children-content {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 16px auto 16px;
     grid-template-areas:
-        "header header header"
-        "goal  goal  quote"
-        "goal  goal  index-photo";
+    "wayside"
+    "rebound"
+    "nanny";
 
+
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "wayside" "rebound" "nanny"
+        
     }
 
-        @include lg {
-            grid-template-columns: 50% auto;
-            grid-template-areas: 
-            "goal quote"
-            "goal quote"
-            "goal index-photo";
-            }
+ 
+       
+    #wayside{
+        grid-area: wayside;
+    }
 
-        #header {
-            grid-area: header;
-        }
+    #rebound{
+        grid-area: rebound;
+    }
 
-        #goal{
-            grid-area: goal;
+    #nanny{
+        grid-area: nanny;
+        
         }
-
-        #quote{
-            grid-area: quote;
-        }
+    }
+}
+ 

@@ -2,5 +2,89 @@
     Header
 ============= */
 header{
- background-color: red
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+    padding: 30px 0;
+
+    >div{
+        grid-area: header;
+        text-align: center;
+
+        h1{
+            font-size: rem-calc(35);
+            margin-bottom: 8px;
+        }
+
+        h2{
+            font-size: rem-calc(16);
+            font-weight: 400;
+        }
+
+        #nav-container{
+
+
+            #burger-container{
+               
+                button{
+                    background-color: transparent;
+                    border: none;
+                    color: black;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: rem-calc(20);
+                    background-color: yellowgreen;
+                    margin: 24px auto 0;
+                }
+
+                @include lg{
+                    display: none;
+                }
+            }
+
+
+            #main-menu {
+                display: none;
+
+                @include lg{
+                    display: block;
+                }
+
+                ul{
+
+                    @include lg{
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        margin-top: 24px;
+                    }
+
+                    li{
+                        list-style: none;
+                        text-align: left;
+                        background-color: yellowgreen;
+                        padding: 20px;
+
+                        @include lg {
+                            padding: 0px;
+                        }
+
+                        a:link, a:visited{
+                            text-decoration: none;
+                            color: black;
+                            transition: 0.25s;
+                            &:hover, &:active {
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

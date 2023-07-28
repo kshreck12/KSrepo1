@@ -2,5 +2,63 @@
     Header
 ============= */
 header {
-  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 16px 20px auto 20px 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". header .";
+  padding: 30px 0;
+}
+header > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header;
+  text-align: center;
+}
+header > div h1 {
+  font-size: rem-calc(25);
+  margin-bottom: 8px;
+}
+header > div h2 {
+  font-size: rem-calc(16);
+  font-weight: 400;
+}
+header > div #nav-container #burger-container button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: rem-calc(20);
+  background-color: yellowgreen;
+  margin: 24px auto 0;
+}
+header > div #nav-container #main-menu {
+  display: none;
+}
+header > div #nav-container #main-menu ul li {
+  list-style: none;
+  text-align: left;
+  background-color: yellowgreen;
+  padding: 16px;
+}
+header > div #nav-container #main-menu ul li a:link, header > div #nav-container #main-menu ul li a:visited {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-container #main-menu ul li a:link:active, header > div #nav-container #main-menu ul li a:visited:hover, header > div #nav-container #main-menu ul li a:visited:active {
+  color: var(--white);
 }

@@ -1,49 +1,42 @@
 /* =============
     Index
 ============= */
-
-main{
-    display: none;
-}
-
-
 #index-content {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 16px auto 16px;
     grid-template-areas:
-        "header header header"
-        "goal  goal  quote"
-        "goal  goal  index-photo";
- 
-@include lg {
-            grid-template-columns: 50% auto;
-            grid-template-areas:
-            "goal quote"
-            "goal quote"
-            "goal index-photo";
-            }
+    "index-img"
+    "goal"
+    "quote";
+
+
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "quote quote quote"
+        "goal  goal index-img"
+        "goal  goal index-img";
     }
+
  
-   
-        #header {
-            grid-area: header;
+       
+    #goal{
+        grid-area: goal;
+    }
+
+    #quote{
+        grid-area: quote;
+    }
+
+    #index-img{
+        grid-area: index-img;
+        text-align: center;
+        img{
+            width: 70%;
+            margin: 0 auto;
         }
- 
-        #goal{
-            grid-area: goal;
-        }
- 
-        #quote{
-            grid-area: quote;
-        }
- 
- 
-        #index-photo{
-            grid-area: index-photo;
-            width: 100%;
-           
-            }
+    }
+}
  
  
 
