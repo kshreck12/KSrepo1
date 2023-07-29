@@ -589,6 +589,24 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   grid-area: index-img;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  #index-content #goal {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  #index-content #quote {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  #index-content #index-img {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+  }
+}
 #index-content #index-img img {
   width: 70%;
   margin: 0 auto;
@@ -645,56 +663,41 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "about-img" "about";
+      grid-template-areas: "about-img" "kate";
 }
 @media (min-width: 1024px) {
   #aboutkate {
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr;
-        grid-template-areas: "about about-img";
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto 20px auto;
+        grid-template-areas: "kate kate about-img" "kate kate about-img";
   }
 }
-#aboutkate #about {
+#aboutkate #kate {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: about;
-}
-@media (min-width: 1024px) {
-  #aboutkate #about {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
+  grid-area: kate;
 }
 #aboutkate #about-img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: index-img;
+  grid-area: about-img;
   text-align: center;
 }
 @media (min-width: 1024px) {
-  #index-content #goal {
-    -ms-grid-row: 3;
+  #aboutkate #kate {
+    -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
-  #index-content #quote {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-  #index-content #index-img {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 5;
-  }
   #aboutkate #about-img {
-    -ms-grid-row: 3;
+    -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 5;
   }
 }
 #aboutkate #about-img img {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
