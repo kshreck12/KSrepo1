@@ -1,0 +1,31 @@
+#aboutkate {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "about-img"
+    "about";
+
+
+    @include lg {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "about about-img";
+    }
+
+ 
+       
+    
+
+    #about{
+        grid-area: about;
+    }
+
+    #about-img{
+        grid-area: index-img;
+        text-align: center;
+        img{
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
