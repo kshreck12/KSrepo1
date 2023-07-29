@@ -378,11 +378,6 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-p {
-  padding: 0;
-  margin: 0;
-}
-
 #quote {
   font-style: italic;
   font-size: 16px;
@@ -659,45 +654,41 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   }
 }
 
-#aboutkate {
+#about-content {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "about-img" "kate";
+      grid-template-areas: "kate" "about-img";
 }
 @media (min-width: 1024px) {
-  #aboutkate {
+  #about-content {
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto 20px auto;
-        grid-template-areas: "kate kate about-img" "kate kate about-img";
+        grid-template-areas: "kate kate about-img";
   }
 }
-#aboutkate #kate {
-  -ms-grid-row: 3;
+#about-content #kate {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: kate;
 }
-#aboutkate #about-img {
-  -ms-grid-row: 1;
+#about-content #about-img {
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: about-img;
-  text-align: center;
 }
 @media (min-width: 1024px) {
-  #aboutkate #kate {
+  #about-content #kate {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
-  #aboutkate #about-img {
+  #about-content #about-img {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
     -ms-grid-column: 5;
   }
 }
-#aboutkate #about-img img {
-  width: 80%;
+#about-content #about-img img {
+  width: 10vh;
   margin: 0 auto;
 }
