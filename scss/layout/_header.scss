@@ -11,15 +11,18 @@ header{
     >div{
         grid-area: header;
         text-align: center;
+        color: var(--deeppurple);
 
         h1{
             font-size: rem-calc(35);
             margin-bottom: 8px;
+
         }
 
         h2{
             font-size: rem-calc(16);
             font-weight: 400;
+            margin-bottom: 8px;
         }
 
         #nav-container{
@@ -38,7 +41,7 @@ header{
                     justify-content: center;
                     align-items: center;
                     font-size: rem-calc(20);
-                    background-color: yellowgreen;
+                    background-color: var(--white);
                     margin: 24px auto 0;
                 }
 
@@ -67,8 +70,8 @@ header{
                     li{
                         list-style: none;
                         text-align: left;
-                        background-color: yellowgreen;
-                        padding: 20px;
+                        background-color: var(--deeppurple);
+                        padding: 20px; 
 
                         @include lg {
                             padding: 0px;
@@ -76,10 +79,10 @@ header{
 
                         a:link, a:visited{
                             text-decoration: none;
-                            color: black;
+                            color: white;
                             transition: 0.25s;
                             &:hover, &:active {
-                                color: var(--white);
+                                color: var(--deeppurple);
                             }
                         }
                     }

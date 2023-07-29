@@ -1,8 +1,4 @@
 
-
-
-
-
 #children-content {
     display: grid;
     grid-gap: 20px;
@@ -17,9 +13,9 @@
     @include lg {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        "wayside rebound nanny"
-        "wayside rebound nanny";
-
+        "wayside wayside wayside"
+        "rebound rebound rebound"
+        "nanny nanny nanny";
         
     }
 

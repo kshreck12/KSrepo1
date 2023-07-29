@@ -13,7 +13,13 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
-  --blue: #219ebc;
+  --blue: #4682B4;
+  --purple: #d6cbd3;
+  --pink:#eca1a6;
+  --green: #bdcebe;
+  --brown: #ada397;
+  --darkgreen: #22311D;
+  --deeppurple: #460A4E;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -356,6 +362,10 @@ main > div {
   grid-area: main;
 }
 
+body {
+  background-color: var(--purple);
+}
+
 /* =============
     Typography
 ============= */
@@ -376,14 +386,39 @@ p {
 #quote {
   font-style: italic;
   font-size: 16px;
+  color: var(--deeppurple);
 }
 
 #goal {
   padding: 15px;
+  color: var(--deeppurple);
+}
+
+#wayside {
+  padding: 20px;
+  color: var(--deeppurple);
+}
+
+#rebound {
+  padding: 20px;
+  color: var(--deeppurple);
+}
+
+#nanny {
+  padding: 20px;
+  color: var(--deeppurple);
 }
 
 h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 8px;
+}
+
+footer {
+  padding-top: 70px;
+  font-size: 14px;
+  color: var(--deeppurple);
 }
 
 /* =============
@@ -433,6 +468,7 @@ header > div {
   -ms-grid-column: 3;
   grid-area: header;
   text-align: center;
+  color: var(--deeppurple);
 }
 header > div h1 {
   font-size: 2.1875rem;
@@ -441,6 +477,7 @@ header > div h1 {
 header > div h2 {
   font-size: 1rem;
   font-weight: 400;
+  margin-bottom: 8px;
 }
 header > div #nav-container #burger-container button {
   background-color: transparent;
@@ -459,7 +496,7 @@ header > div #nav-container #burger-container button {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.25rem;
-  background-color: yellowgreen;
+  background-color: var(--white);
   margin: 24px auto 0;
 }
 @media (min-width: 1024px) {
@@ -490,7 +527,7 @@ header > div #nav-container #main-menu {
 header > div #nav-container #main-menu ul li {
   list-style: none;
   text-align: left;
-  background-color: yellowgreen;
+  background-color: var(--deeppurple);
   padding: 20px;
 }
 @media (min-width: 1024px) {
@@ -500,12 +537,12 @@ header > div #nav-container #main-menu ul li {
 }
 header > div #nav-container #main-menu ul li a:link, header > div #nav-container #main-menu ul li a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-container #main-menu ul li a:link:active, header > div #nav-container #main-menu ul li a:visited:hover, header > div #nav-container #main-menu ul li a:visited:active {
-  color: var(--white);
+  color: var(--deeppurple);
 }
 
 /* =============
@@ -577,8 +614,8 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   #children-content {
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto 20px auto;
-        grid-template-areas: "wayside rebound nanny" "wayside rebound nanny";
+    -ms-grid-rows: auto 20px auto 20px auto;
+        grid-template-areas: "wayside wayside wayside" "rebound rebound rebound" "nanny nanny nanny";
   }
 }
 #children-content #wayside {
@@ -599,17 +636,17 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
 @media (min-width: 1024px) {
   #children-content #wayside {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
   #children-content #rebound {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
   #children-content #nanny {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 5;
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
 }

@@ -18,13 +18,49 @@ p{
 #quote{
     font-style: italic;
     font-size: 16px;
+    color: var(--deeppurple);
 }
 
 #goal {
     padding: 15px;
+    color: var(--deeppurple);
 
 }
 
-h2 {
-    margin-bottom: 8px;
+#wayside {
+    padding: 20px;
+    color: var(--deeppurple);
 }
+
+#rebound {
+    padding: 20px;
+    color: var(--deeppurple);
+}
+#nanny {
+    padding: 20px;
+    color: var(--deeppurple);
+}
+
+
+
+h2{
+        font-size: rem-calc(20);
+        font-weight: 600;
+        margin-bottom: 8px;
+        }
+
+
+footer {
+
+    padding-top: 70px;
+    font-size: 14px;
+    color: var(--deeppurple);
+
+}
+
+
+
+
+
+
+
