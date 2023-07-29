@@ -658,37 +658,56 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "kate" "about-img";
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "kate kate img";
 }
-@media (min-width: 1024px) {
-  #about-content {
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "kate kate about-img";
-  }
-}
-#about-content #kate {
+
+#kate {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: kate;
 }
-#about-content #about-img {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+
+#about-img {
   grid-area: about-img;
 }
+#about-img img {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#management-content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+      grid-template-areas: "traderjoes" "clinical";
+}
 @media (min-width: 1024px) {
-  #about-content #kate {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-  #about-content #about-img {
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
+  #management-content {
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "traderjoes clinical";
   }
 }
-#about-content #about-img img {
-  width: 10vh;
-  margin: 0 auto;
+#management-content #clinical {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: clinical;
+}
+#management-content #traderjoes {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: traderjoes;
+}
+@media (min-width: 1024px) {
+  #management-content #clinical {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  #management-content #traderjoes {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
 }

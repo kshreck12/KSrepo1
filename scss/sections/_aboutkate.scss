@@ -2,18 +2,11 @@
 #about-content {
     display: grid;
     grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "kate"
-    "about-img";
+    "kate kate img";
 
-
-    @include lg {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-        "kate kate about-img";
-
-    
-    }
+}
 
 
     #kate{
@@ -25,11 +18,11 @@
     #about-img{
         grid-area: about-img;
         img{
-            width: 10vh;
+            width: 40%;
             margin: 0 auto;
         }
     }
-}
+
  
  
 

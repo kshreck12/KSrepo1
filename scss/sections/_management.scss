@@ -1,0 +1,28 @@
+#management-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "traderjoes"
+    "clinical";
+
+
+
+
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "traderjoes clinical";
+    }
+
+ 
+       
+    #clinical{
+        grid-area: clinical;
+    }
+
+    #traderjoes{
+        grid-area: traderjoes;
+    }
+
+    
+    }

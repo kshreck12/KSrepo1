@@ -1,0 +1,28 @@
+#management-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "traderjoes"
+    "wayside2"
+
+
+
+
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "traderjoes wayside2";
+    }
+
+ 
+       
+    #wayside2{
+        grid-area: wayside2;
+    }
+
+    #traderjoes{
+        grid-area: traderjoes;
+    }
+
+    
+    }
