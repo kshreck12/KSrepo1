@@ -686,31 +686,29 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
 }
 @media (min-width: 1024px) {
   #management-content {
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: auto 20px 1024px 20px auto;
+    grid-template-columns: auto 1024px auto;
     -ms-grid-rows: auto 20px auto;
-        grid-template-areas: "traderjoes traderjoes traderjoes" "clinical clinical clinical";
+        grid-template-areas: "traderjoes" "clinical";
   }
-}
-#management-content #clinical {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: clinical;
 }
 #management-content #traderjoes {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: traderjoes;
 }
+#management-content #clinical {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: clinical;
+}
 @media (min-width: 1024px) {
-  #management-content #clinical {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
   #management-content #traderjoes {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
+  }
+  #management-content #clinical {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
   }
 }

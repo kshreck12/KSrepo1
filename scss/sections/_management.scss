@@ -1,29 +1,37 @@
+
 #management-content {
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
     "traderjoes"
     "clinical";
+    
 
 
 
 
     @include lg {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-        "traderjoes traderjoes traderjoes"
-        "clinical clinical clinical";
+        grid-template-columns: auto 1024px auto;
+        grid-template-areas: 
+        "traderjoes"
+        "clinical";
+        
+        
     }
 
  
        
-    #clinical{
-        grid-area: clinical;
-    }
-
     #traderjoes{
         grid-area: traderjoes;
     }
 
+    #clinical{
+        grid-area: clinical;
+    }
+    
+
     
     }
+
+    
+ 
