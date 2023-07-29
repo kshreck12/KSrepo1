@@ -657,24 +657,28 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
 #about-content {
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "kate kate img";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "kate kate kate about-img" "kate kate kate about-img";
 }
 
 #kate {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: kate;
 }
 
 #about-img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
   grid-area: about-img;
+  text-align: center;
 }
 #about-img img {
-  width: 40%;
+  width: 300%;
   margin: 0 auto;
 }
 
@@ -682,33 +686,40 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "traderjoes" "clinical";
+  -ms-grid-columns: 1fr 20px 1fr 20px 1f;
+  grid-template-columns: 1fr 1fr 1f;
+  -ms-grid-rows: auto 20px auto;
+      grid-template-areas: "traderjoes traderjoes traderjoes" "clinical clinical clinical";
 }
 @media (min-width: 1024px) {
   #management-content {
-    -ms-grid-columns: auto 20px 1024px 20px auto;
-    grid-template-columns: auto 1024px auto;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto 20px auto;
-        grid-template-areas: "traderjoes" "clinical";
+        grid-template-areas: "traderjoes traderjoes traderjoes" "clinical clinical clinical";
   }
 }
 #management-content #traderjoes {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: traderjoes;
 }
 #management-content #clinical {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: clinical;
 }
 @media (min-width: 1024px) {
   #management-content #traderjoes {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
   #management-content #clinical {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
 }

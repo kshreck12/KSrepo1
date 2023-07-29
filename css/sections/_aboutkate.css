@@ -1,24 +1,27 @@
 #about-content {
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "kate kate img";
+      grid-template-areas: "kate kate about-img" "kate kate about-img" "kate kate about-img";
 }
 
 #kate {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: kate;
 }
 
 #about-img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
   grid-area: about-img;
+  text-align: center;
 }
 #about-img img {
-  max-height: auto;
-  width: 40%;
+  width: 70%;
   margin: 0 auto;
 }

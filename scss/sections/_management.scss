@@ -2,19 +2,20 @@
 #management-content {
     display: grid;
     grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1f;
     grid-template-areas:
-    "traderjoes"
-    "clinical";
+    "traderjoes traderjoes traderjoes"
+    "clinical clinical clinical";
     
 
 
 
 
     @include lg {
-        grid-template-columns: auto 1024px auto;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-        "traderjoes"
-        "clinical";
+        "traderjoes traderjoes traderjoes"
+        "clinical clinical clinical";
         
         
     }
