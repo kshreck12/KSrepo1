@@ -11,7 +11,8 @@
     @include lg {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        "traderjoes clinical";
+        "traderjoes traderjoes traderjoes"
+        "clinical clinical clinical";
     }
 
  
