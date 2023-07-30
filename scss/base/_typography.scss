@@ -44,6 +44,7 @@ h2{
         font-size: rem-calc(20);
         font-weight: 600;
         margin-bottom: 8px;
+        color: var(--deeppurple);
         }
 
 
@@ -55,13 +56,14 @@ footer {
 
 }
 
-#aboutkate {
+p {
     color: var(--deeppurple);
 }
 
-#resume {
+#projects { 
     color: var(--deeppurple);
 }
+
 
 
 

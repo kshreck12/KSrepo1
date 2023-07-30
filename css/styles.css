@@ -408,6 +408,7 @@ h2 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
+  color: var(--deeppurple);
 }
 
 footer {
@@ -416,11 +417,11 @@ footer {
   color: var(--deeppurple);
 }
 
-#aboutkate {
+p {
   color: var(--deeppurple);
 }
 
-#resume {
+#projects {
   color: var(--deeppurple);
 }
 
@@ -657,27 +658,39 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
 #about-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "kate kate kate about-img" "kate kate kate about-img";
+  grid-gap: 20px;
+      grid-template-areas: "about-img" "kate";
 }
-
-#kate {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+@media (min-width: 1024px) {
+  #about-content {
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "kate kate about-img";
+  }
+}
+#about-content #kate {
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: kate;
 }
-
-#about-img {
+#about-content #about-img {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
+  -ms-grid-column: 1;
   grid-area: about-img;
   text-align: center;
 }
-#about-img img {
+@media (min-width: 1024px) {
+  #about-content #kate {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  #about-content #about-img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+}
+#about-content #about-img img {
   width: 300%;
   margin: 0 auto;
 }

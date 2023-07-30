@@ -1,26 +1,49 @@
 
-#about-content {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-areas:
-"kate kate kate about-img"
-"kate kate kate about-img";
 
-}
 
-#kate {
-    grid-area: kate;
-}
 
-#about-img {
+
+
+    #about-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "about-img"
+    "kate";
+
+
+
+
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "kate kate about-img";
+        
+        
+    }
+
+ 
+       
+    #kate{
+        grid-area: kate;
+    }
+
+    #about-img {
         grid-area: about-img;
         text-align: center;
         img{
             width: 300%;
             margin: 0 auto;
         }
-
+      }
     }
+
+    
+        
+        
+
+
+ 
  
  
 
