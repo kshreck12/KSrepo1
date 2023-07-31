@@ -2,20 +2,18 @@
 #management-content {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1f;
     grid-template-areas:
-    "traderjoes traderjoes traderjoes"
-    "clinical clinical clinical";
+    "traderjoes "
+    "clinical ";
     
 
 
 
 
     @include lg {
-        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-        "traderjoes traderjoes traderjoes"
-        "clinical clinical clinical";
+        "traderjoes"
+        "clinical";
         
         
     }
@@ -24,15 +22,29 @@
        
     #traderjoes{
         grid-area: traderjoes;
+        border: 20px solid #460A4E;
+        margin: auto;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     #clinical{
         grid-area: clinical;
+        border: 20px solid #460A4E;
+        margin: auto;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
     
-
+}
     
-    }
+    
 
     
  

@@ -17,8 +17,8 @@
     @include lg {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        "kate kate about-img";
-        
+        "kate kate about-img"
+        "kate kate  .  ";
         
     }
 
@@ -26,14 +26,25 @@
        
     #kate{
         grid-area: kate;
+        border: 20px solid #460A4E;
+        margin: auto;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 18px;
+        padding-right: 3px;
+    
+
+
     }
 
     #about-img {
         grid-area: about-img;
         text-align: center;
         img{
-            width: 300%;
+            width: 75%;
             margin: 0 auto;
+            padding-left: 25px;
         }
       }
     }

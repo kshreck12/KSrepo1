@@ -419,9 +419,9 @@ h3 {
 }
 
 footer {
-  padding-top: 70px;
   font-size: 14px;
   color: var(--deeppurple);
+  padding-top: 100px;
 }
 
 p {
@@ -580,6 +580,13 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: goal;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 18px;
+  padding-right: 10px;
 }
 #index-content #quote {
   -ms-grid-row: 5;
@@ -611,8 +618,9 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   }
 }
 #index-content #index-img img {
-  width: 70%;
-  margin: 0 auto;
+  width: 80%;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 #children-content {
@@ -633,16 +641,37 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: wayside;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 #children-content #rebound {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: rebound;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 #children-content #nanny {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: nanny;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 @media (min-width: 1024px) {
   #children-content #wayside {
@@ -672,13 +701,21 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   #about-content {
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "kate kate about-img";
+    -ms-grid-rows: auto 20px auto;
+        grid-template-areas: "kate kate about-img" "kate kate  .  ";
   }
 }
 #about-content #kate {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: kate;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 18px;
+  padding-right: 3px;
 }
 #about-content #about-img {
   -ms-grid-row: 1;
@@ -689,6 +726,7 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
 @media (min-width: 1024px) {
   #about-content #kate {
     -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
@@ -698,48 +736,53 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   }
 }
 #about-content #about-img img {
-  width: 300%;
+  width: 75%;
   margin: 0 auto;
+  padding-left: 25px;
 }
 
 #management-content {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1f;
-  grid-template-columns: 1fr 1fr 1f;
-  -ms-grid-rows: auto 20px auto;
-      grid-template-areas: "traderjoes traderjoes traderjoes" "clinical clinical clinical";
+      grid-template-areas: "traderjoes " "clinical ";
 }
 @media (min-width: 1024px) {
   #management-content {
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto 20px auto;
-        grid-template-areas: "traderjoes traderjoes traderjoes" "clinical clinical clinical";
+        grid-template-areas: "traderjoes" "clinical";
   }
 }
 #management-content #traderjoes {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
   grid-area: traderjoes;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 #management-content #clinical {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
   grid-area: clinical;
+  border: 20px solid #460A4E;
+  margin: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 @media (min-width: 1024px) {
   #management-content #traderjoes {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
   }
   #management-content #clinical {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
   }
 }

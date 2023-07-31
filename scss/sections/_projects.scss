@@ -1,28 +1,34 @@
-
-#children-content {
+#projects-content {
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
-    "wayside"
-    "rebound"
-    "nanny";
+    "coursework"
+    "associations"
+    "advocacy";
 
 
 
 
     @include lg {
-        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        "wayside wayside wayside"
-        "rebound rebound rebound"
-        "nanny nanny nanny";
+        "coursework"
+        "associations"
+        "advocacy";
         
     }
 
- 
-       
-    #wayside{
-        grid-area: wayside;
+    #coursework {
+        grid-area: coursework;
+        border: 20px solid #460A4E;
+        margin: auto;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+
+    #associations {
+        grid-area: associations;
         border: 20px solid #460A4E;
         margin: auto;
         width: 100%;
@@ -31,10 +37,9 @@
         padding-left: 18px;
         padding-right: 18px;
     }
-    
 
-    #rebound{
-        grid-area: rebound;
+    #advocacy {
+        grid-area: advocacy
         border: 20px solid #460A4E;
         margin: auto;
         width: 100%;
@@ -43,20 +48,3 @@
         padding-left: 18px;
         padding-right: 18px;
     }
-    
-
-    #nanny{
-        grid-area: nanny;
-        border: 20px solid #460A4E;
-        margin: auto;
-        width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 18px;
-        padding-right: 18px;
-    
-        
-        }
-    }
-
- 
