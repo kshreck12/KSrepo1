@@ -27,6 +27,8 @@
         padding-left: 18px;
         padding-right: 18px;
 
+    }
+
     #associations {
         grid-area: associations;
         border: 20px solid #460A4E;
@@ -39,7 +41,7 @@
     }
 
     #advocacy {
-        grid-area: advocacy
+        grid-area: advocacy;
         border: 20px solid #460A4E;
         margin: auto;
         width: 100%;
@@ -48,3 +50,4 @@
         padding-left: 18px;
         padding-right: 18px;
     }
+}
