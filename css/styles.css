@@ -406,14 +406,14 @@ h1, h2, h3, h4 {
 
 h2 {
   font-size: 1.5625rem;
-  font-weight: 600;
+  font-weight: 900;
   margin-bottom: 8px;
   color: var(--deeppurple);
 }
 
 h3 {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 8px;
   color: var(--deeppurple);
 }
@@ -430,6 +430,14 @@ p {
 
 #projects {
   color: var(--deeppurple);
+}
+
+li {
+  color: var(--deeppurple);
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* =============
@@ -566,7 +574,7 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "index-img" "goal" "quote";
+      grid-template-areas: "index-img" "quote" "goal";
 }
 @media (min-width: 1024px) {
   #index-content {
@@ -577,19 +585,14 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   }
 }
 #index-content #goal {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: goal;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 18px;
-  padding-right: 10px;
+  text-align: center;
 }
 #index-content #quote {
-  -ms-grid-row: 5;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: quote;
 }
@@ -619,8 +622,7 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
 }
 #index-content #index-img img {
   width: 80%;
-  margin-left: 50px;
-  margin-top: 20px;
+  margin: auto;
 }
 
 #children-content {
@@ -642,36 +644,21 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   -ms-grid-column: 1;
   grid-area: wayside;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 #children-content #rebound {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: rebound;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 #children-content #nanny {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: nanny;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   #children-content #wayside {
@@ -710,12 +697,8 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   -ms-grid-column: 1;
   grid-area: kate;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 18px;
-  padding-right: 3px;
+  text-align: center;
+  padding-top: 40px;
 }
 #about-content #about-img {
   -ms-grid-row: 1;
@@ -736,9 +719,8 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   }
 }
 #about-content #about-img img {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
-  padding-left: 25px;
 }
 
 #management-content {
@@ -757,24 +739,14 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   -ms-grid-column: 1;
   grid-area: traderjoes;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 #management-content #clinical {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: clinical;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   #management-content #traderjoes {
@@ -803,36 +775,21 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   -ms-grid-column: 1;
   grid-area: coursework;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 #projects-content #associations {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: associations;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 #projects-content #advocacy {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: advocacy;
   border: 20px solid #460A4E;
-  margin: auto;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   #projects-content #coursework {

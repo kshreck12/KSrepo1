@@ -27,24 +27,17 @@
     #kate{
         grid-area: kate;
         border: 20px solid #460A4E;
-        margin: auto;
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 18px;
-        padding-right: 3px;
+        text-align: center;
+        padding-top: 40px;
     
-
-
     }
 
     #about-img {
         grid-area: about-img;
         text-align: center;
         img{
-            width: 75%;
+            width: 80%;
             margin: 0 auto;
-            padding-left: 25px;
         }
       }
     }

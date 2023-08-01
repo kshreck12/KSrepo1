@@ -42,14 +42,14 @@ h1,h2,h3,h4{
 
 h2{
         font-size: rem-calc(25);
-        font-weight: 600;
+        font-weight: 900;
         margin-bottom: 8px;
         color: var(--deeppurple);
         }
 
 h3{
         font-size: rem-calc(18);
-        font-weight: 600;
+        font-weight: 800;
         margin-bottom: 8px;
         color: var(--deeppurple);
         }
@@ -68,6 +68,16 @@ p {
 
 #projects { 
     color: var(--deeppurple);
+}
+
+li {
+    color: var(--deeppurple);
+
+
+}
+
+ul {
+    list-style-type: none;
 }
 
 

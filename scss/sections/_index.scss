@@ -6,8 +6,8 @@
     grid-gap: 20px;
     grid-template-areas:
     "index-img"
-    "goal"
-    "quote";
+    "quote"
+    "goal";
 
 
     @include lg {
@@ -23,12 +23,7 @@
     #goal{
         grid-area: goal;
         border: 20px solid #460A4E;
-        margin: auto;
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 18px;
-        padding-right: 10px;
+        text-align: center;
     }
 
     #quote{
@@ -40,8 +35,7 @@
         text-align: center;
         img{
             width: 80%;
-            margin-left: 50px;
-            margin-top: 20px;
+            margin: auto;
         }
     }
 }
