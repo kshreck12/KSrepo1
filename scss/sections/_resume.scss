@@ -1,0 +1,30 @@
+#resume-content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "link"
+    "myresume";
+
+@include lg {
+        grid-template-areas:
+        "link"
+        "myresume";
+        
+    }
+
+
+
+ 
+       
+    #myresume{
+        grid-area: myresume;
+        border: 20px solid #460A4E;
+        text-align: center;
+    }
+
+    #link{
+        grid-area: link;
+        border: 20px solid #460A4E;
+        text-align: center;
+ }
+}

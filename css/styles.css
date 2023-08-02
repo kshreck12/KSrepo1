@@ -727,7 +727,7 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-      grid-template-areas: "traderjoes " "clinical ";
+      grid-template-areas: "traderjoes" "clinical";
 }
 @media (min-width: 1024px) {
   #management-content {
@@ -802,6 +802,42 @@ header > div #nav-container #main-menu ul li a:link:hover, header > div #nav-con
   }
   #projects-content #advocacy {
     -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+}
+
+#resume-content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+      grid-template-areas: "link" "myresume";
+}
+@media (min-width: 1024px) {
+  #resume-content {
+        grid-template-areas: "link" "myresume";
+  }
+}
+#resume-content #myresume {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: myresume;
+  border: 20px solid #460A4E;
+  text-align: center;
+}
+#resume-content #link {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: link;
+  border: 20px solid #460A4E;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  #resume-content #myresume {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  #resume-content #link {
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
 }
